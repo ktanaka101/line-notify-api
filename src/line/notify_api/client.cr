@@ -1,0 +1,2 @@
+module Line::NotifyAPI
+end
