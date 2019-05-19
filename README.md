@@ -1,6 +1,10 @@
 # line-notify-api
 
-TODO: Write a description here
+Client for LINE notifiy API by Crystal.
+
+The specifications of the Line Notify API can be checked at the following URL.
+
+https://notify-bot.line.me/doc/en/
 
 ## Installation
 
@@ -16,15 +20,71 @@ TODO: Write a description here
 
 ## Usage
 
+### Notify message
+
+#### Notify the specified string
+
 ```crystal
-require "line-notify-api-client"
+require "line-notify-api"
+
+client = LINE::NotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
+client.notify("Hello, World!")
 ```
 
-TODO: Write usage instructions here
+### Notify image file
 
-## Development
+#### Thumbnail
 
-TODO: Write development instructions here
+```crystal
+require "line-notify-api"
+
+client = LINE::NotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
+client.notify("Hello, World!", img_tmb: "https://example.com/tmb.jpg")
+```
+
+#### Original size
+
+```crystal
+require "line-notify-api"
+
+client = LINE::NotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
+client.notify("Hello, World!", img_file: "https://example.com/orig.jpg")
+```
+
+```crystal
+require "line-notify-api"
+
+client = LINE::NotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
+client.notify("Hello, World!", img_file: "/path/orig.jpg")
+```
+
+### Notify sticker
+
+```crystal
+require "line-notify-api"
+
+client = LINE::NotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
+client.notify("Hello, World!", stk_pkg_id: 1, stk_id: 1)
+```
+
+### You can not use the client. In that case it has the same functionality as the client
+
+```crystal
+require "line-notify-api"
+
+LINE::NotifyAPI.notify(YOUR_LINE_ACCESS_TOKEN, "Hello, World!")
+```
+
+```crystal
+require "line-notify-api"
+
+LINE::NotifyAPI.notify(
+  YOUR_LINE_ACCESS_TOKEN,
+  "Hello, World!",
+  img_tmb: "https://example.com/tmb.jpg",
+  img_file: "https://example.com/orig.jpg"
+)
+```
 
 ## Contributing
 
