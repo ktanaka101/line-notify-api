@@ -1,6 +1,11 @@
 name: line-notify-api
 version: 0.1.0
 
+development_dependencies:
+  webmock:
+    github: manastech/webmock.cr
+    branch: master
+
 authors:
   - Kentaro Tanaka <kentanaka101@gmail.com>
 
