@@ -39,7 +39,7 @@ client.notify("Hello, World!")
 require "line-notify-api"
 
 client = LINE::NotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
-client.notify("Hello, World!", img_tmb: "https://example.com/tmb.jpg")
+client.notify("Hello, World!", thumbnail: "https://example.com/tmb.jpg", img_file: "https://example.com/orig.jpg")
 ```
 
 #### Original size
@@ -81,7 +81,7 @@ require "line-notify-api"
 LINE::NotifyAPI.notify(
   YOUR_LINE_ACCESS_TOKEN,
   "Hello, World!",
-  img_tmb: "https://example.com/tmb.jpg",
+  thumbnail: "https://example.com/tmb.jpg",
   img_file: "https://example.com/orig.jpg"
 )
 ```
