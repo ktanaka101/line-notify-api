@@ -12,7 +12,7 @@ https://notify-bot.line.me/doc/en/
 
    ```yaml
    dependencies:
-     line-notify-api:
+     line_notify_api:
        github: ktanaka101/line-notify-api
    ```
 
@@ -25,9 +25,9 @@ https://notify-bot.line.me/doc/en/
 #### Notify the specified string
 
 ```crystal
-require "line-notify-api"
+require "line_notify_api"
 
-client = LINE::NotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
+client = LineNotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
 client.notify("Hello, World!")
 ```
 
@@ -36,49 +36,49 @@ client.notify("Hello, World!")
 #### Thumbnail
 
 ```crystal
-require "line-notify-api"
+require "line_notify_api"
 
-client = LINE::NotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
+client = LineNotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
 client.notify("Hello, World!", thumbnail: "https://example.com/tmb.jpg", img_file: "https://example.com/orig.jpg")
 ```
 
 #### Original size
 
 ```crystal
-require "line-notify-api"
+require "line_notify_api"
 
-client = LINE::NotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
+client = LineNotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
 client.notify("Hello, World!", img_file: "https://example.com/orig.jpg")
 ```
 
 ```crystal
-require "line-notify-api"
+require "line_notify_api"
 
-client = LINE::NotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
+client = LineNotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
 client.notify("Hello, World!", img_file: "/path/orig.jpg")
 ```
 
 ### Notify sticker
 
 ```crystal
-require "line-notify-api"
+require "line_notify_api"
 
-client = LINE::NotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
+client = LineNotifyAPI::Client.new(YOUR_LINE_ACCESS_TOKEN)
 client.notify("Hello, World!", stk_pkg_id: 1, stk_id: 1)
 ```
 
 ### You can not use the client. In that case it has the same functionality as the client
 
 ```crystal
-require "line-notify-api"
+require "line_notify_api"
 
-LINE::NotifyAPI.notify(YOUR_LINE_ACCESS_TOKEN, "Hello, World!")
+LineNotifyAPI.notify(YOUR_LINE_ACCESS_TOKEN, "Hello, World!")
 ```
 
 ```crystal
-require "line-notify-api"
+require "line_notify_api"
 
-LINE::NotifyAPI.notify(
+LineNotifyAPI.notify(
   YOUR_LINE_ACCESS_TOKEN,
   "Hello, World!",
   thumbnail: "https://example.com/tmb.jpg",
