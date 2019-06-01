@@ -1,7 +1,7 @@
-require "./notify_api/*"
+require "./line_notify_api/*"
 require "http/client"
 
-module Line::NotifyAPI
+module LineNotifyAPI
   # Use the LINENotify API to notify.
   # See: https://notify-bot.line.me/doc/en/
   #

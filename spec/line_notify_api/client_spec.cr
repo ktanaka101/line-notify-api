@@ -1,7 +1,7 @@
-require "../../spec_helper"
+require "../spec_helper"
 require "webmock"
 
-module Line::NotifyAPI
+module LineNotifyAPI
   describe Client do
     it "token" do
       client = Client.new("token")

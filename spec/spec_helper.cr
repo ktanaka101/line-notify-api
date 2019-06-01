@@ -1,2 +1,2 @@
 require "spec"
-require "../src/line/notify_api"
+require "../src/line_notify_api"

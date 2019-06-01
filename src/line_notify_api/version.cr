@@ -1,3 +1,3 @@
-module Line::NotifyAPI
+module LineNotifyAPI
   VERSION = "0.1.0"
 end
