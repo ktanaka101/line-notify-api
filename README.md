@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/ktanaka101/line-notify-api.svg?style=svg)](https://circleci.com/gh/ktanaka101/line-notify-api)
+
 # line-notify-api
 
 Client for LINE notifiy API by Crystal.
